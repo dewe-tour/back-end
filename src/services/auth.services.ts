@@ -1,4 +1,3 @@
-import { error } from "console";
 import { LoginDTO, RegisterDTO } from "../dto/user.dto";
 import userRepositories from "../repositories/user.repositories";
 import bcrypt from "bcrypt";
