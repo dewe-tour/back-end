@@ -15,6 +15,7 @@ datasource db {
 
 model User {
   id Int @id @default(autoincrement())
+  role RoleEnum @default(USER)
   fullName String
   email String @unique
   password String
@@ -29,6 +30,11 @@ model User {
   updateAt DateTime @default(now()) @updatedAt
 
   @@map("user")
+}
+
+enum RoleEnum {
+  ADMIN
+  USER
 }
 
 model Tour {
